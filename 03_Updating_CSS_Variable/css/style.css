@@ -1,0 +1,122 @@
+:root{
+
+	--spacing_padding: 0rem;
+	--blur_value: 0px;
+	--base_color: #bada55;
+	--spacing_margin: 0rem;
+	--image_width: 30vw;
+	--image_height: 30vh;
+	--rotation_degree: 0deg;
+
+}
+
+body{
+	width: 100%;
+	min-height: 100vh;
+	background: #09709f;
+	background: linear-gradient(90deg, #09709fdc 0%, #2850bd 26%, #4141d6b9 55%, #2fc8e0e1 83%);
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1{
+	text-align: center;
+	align-items: center;
+	color: #171a0d;
+	font-style: oblique;
+	text-decoration: solid;
+	font-family: "Schoolbell";
+}
+
+.controls{
+	margin-top: 2%;
+	margin-left: 1%;
+	align-content: center;
+	margin-bottom: 10%;
+
+}
+
+.control{
+	display: inline-block;
+	margin: 0.5rem;
+	width: 30%;
+}
+
+label{
+	font-size: 1.3rem;
+	padding-right: 0rem;
+}
+
+input[type=range]{
+	-webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track{
+	height: 5px;
+	border: none;
+	border-radius: 5%;
+	background-color: #60badde7;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: none;
+	height: 16px;
+	width: 16px;
+	border-radius: 60%;
+	background: #4589f5;
+	margin-top: -6px;
+}
+
+input[type=range]:focus {
+	outline: none;
+}
+
+input[type=color]{
+	width: 15%;
+	border-width: 0.2rem;
+}
+
+#pictures{
+	justify-content: center;
+	align-content: center;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+img{
+	padding: var(--spacing_padding);
+	margin: var(--spacing_margin);
+	background-color: var(--base_color);
+	filter: blur(var(--blur_value));
+	width: var(--image_width);
+	height: var(--image_height);
+	margin-bottom: 20px;
+	border: 3px solid;
+	transition: all 0.1s;
+	transform: rotate( var(--rotation_degree));
+	transform-origin: 50%;
+}
+
+.hl{
+	color: var(--base_color);
+}
+
+
+footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0pt;
+	left: 0pt;
+
+	background-color: var(--base_color);
+}
+
+.footer_contents {
+	text-align: center;
+	font-size: 105%;
+	font-weight: bolder;
+	color: #0f3c3f80;
+	text-align: center;
+	justify-content: center;
+	font-family: "Schoolbell";
+}

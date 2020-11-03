@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta lang="UTF-8">
+		<title>CSS Variable Updator</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<link href='https://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet'>
+
+
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+
+	<body>
+
+		<h1>Update <span class="hl"> CSS </span> variables with help of <span class="hl"> JavaScript </span> </h1>
+
+		<div class="controls">
+
+			<section  class="control">
+
+				<label for="padding">Padding:</label>
+
+				<input type="range" id="spacing" name="spacing_padding" min="0" max="2" value="0" step="0.01" data-sizing="rem">
+
+			</section>
+
+			<section class="control">
+
+				<label for="blur">Blur:</label>
+
+				<input type="range" id="blur" name="blur_value" min="0" max="20" value="0" data-sizing="px">
+
+			</section>
+
+			<section class="control">
+
+				<label for="base">Base Color:</label>
+
+				<input type="color" id="base" value="#bada55" name="base_color">
+
+			</section>
+
+			<section class="control">
+
+				<label for="margin">Margin:</label>
+
+				<input type="range" id="margin" name="spacing_margin" min="0" max="5" value="0" step="0.01" data-sizing="rem">
+
+			</section>
+
+			<section class="control">
+
+				<label for="width">Width:</label>
+
+				<input type="range" id="width" name="image_width" min="10" max="80" value="30" step="1" data-sizing="vw">
+
+			</section>
+
+			<section class="control">
+
+				<label for="height">Height:</label>
+
+				<input type="range" id="height" name="image_height" min="10" max="80" value="30" step="0.01" data-sizing="vh">
+
+			</section>
+
+
+			<section class="control">
+
+				<label for="rotation">Rotate:</label>
+
+				<input type="range" id="rotation" name="rotation_degree" min="-359.99" max="359.99" value="0" step="0.01" data-sizing="deg">
+
+			</section>
+
+		</div>
+
+		<section id="pictures">
+
+			<img src="images/computer-1209641_1280.jpg" alt="Computers">
+
+			<img src="images/moon-31665_1280.png" alt="Moon">
+
+		</section>
+
+		<footer class="footer">
+			<div class="footer_contents">
+				Copyright © Raman Preet Singh 2020
+			</div>
+		</footer>
+
+	</body>
+
+	<script src="js/script.js"></script>
+
+</html>
