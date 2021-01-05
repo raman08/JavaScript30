@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Check the boxes</title>
+</head>
+
+<body>
+
+	<style>
+		body {
+			background-color: #ffff06;
+		}
+
+		.inbox{
+			max-width: 40%;
+			margin: 3% auto;
+			background-color: white;
+			border: yellowgreen 3px solid;
+			border-radius: .5%;
+			box-shadow: 3px 5px 0 #0000001a;
+		}
+
+		.item{
+			display: flex;
+			align-items: center;
+			border-bottom: solid 1px;
+		}
+
+		input:checked + label {
+			background-color: #c6ced444;
+			text-decoration: underline;
+		}
+
+		input[type="checkbox"]{
+			margin: 25px;
+		}
+
+		label{
+			flex: 1;
+			margin: 0%;
+			padding: 10px;
+			font-size: 1.2rem;
+		}
+
+
+	</style>
+
+	<div class="inbox">
+		<div class="item">
+			<input type="checkbox" id="1">
+			<label for="1">This is a Sample Project</label>
+		</div>
+		<div class="item">
+			<input type="checkbox" id="2">
+			<label for="2">Check Any one item</label>
+		</div>
+		<div class="item">
+			<input type="checkbox" id="3">
+			<label for="3">Hold Your Shift Key</label>
+		</div>
+		<div class="item">
+			<input type="checkbox" id="4">
+			<label for="4">Check Any other box</label>
+		</div>
+		<div class="item">
+			<input type="checkbox" id="5">
+			<label for="">Now See Magic</label>
+		</div>
+		<div class="item">
+			<input type="checkbox" id="6">
+			<label for="6">All the boxes inbetween should be checked</label>
+		</div>
+		<div class="item">
+			<input type="checkbox" id="7">
+			<label for="7">Jist with simple JavaScript</label>
+		</div>
+		<div class="item">
+			<input type="checkbox" id="8">
+			<label for="8">Without any external Liberary</label>
+		</div>
+		<div class="item">
+			<input type="checkbox" id="9">
+			<label for="9">Good Luck</label>
+		</div>
+		<div class="item">
+			<input type="checkbox" id="10">
+			<label for="10">Made with Love</label>
+		</div>
+	</div>
+
+
+	<script>
+
+		const boxes = Array.from(document.querySelectorAll('.inbox .item [type="checkbox"]'));
+			let lastChecked;
+
+			function changeBox(event) {
+				if (event.shiftKey && this != lastChecked) {
+					checkIntermediateBoxes(lastChecked, this);
+				}
+
+				lastChecked = this;
+			}
+			boxes.forEach(item => item.addEventListener('click', changeBox));
+
+			function checkIntermediateBoxes(first, second) {
+				if (boxes.indexOf(first) > boxes.indexOf(second)) {
+					[second, first] = [first, second];
+				}
+
+				intermediateBoxes(first, second).forEach(box => box.checked = true);
+			}
+
+			function intermediateBoxes(start, end) {
+				return boxes.filter((item, key) => {
+					return boxes.indexOf(start) < key && key < boxes.indexOf(end);
+				});
+			}
+
+
+		// items.forEach(item => addEventListener('click', handleCheck));
+	</script>
+</body>
+</html>
