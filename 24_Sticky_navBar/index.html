@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sticky Nav</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<header>
+		<h1>A story about getting lost.</h1>
+	</header>
+
+	<nav id="main">
+		<ul>
+			<li class="logo"><a href="#">LOST.</a></li>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Images</a></li>
+			<li><a href="#">Locations</a></li>
+			<li><a href="#">Maps</a></li>
+		</ul>
+	</nav>
+
+	<div class="site-wrap">
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate, corporis a qui libero ipsum delectus quidem dolor at nulla, adipisci veniam in reiciendis aut asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in aspernatur pariatur fugit quibusdam dolores sunt esse magni, ut, dignissimos.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate, corporis a qui libero ipsum delectus quidem dolor at nulla, adipisci veniam in reiciendis aut asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in aspernatur pariatur fugit quibusdam dolores sunt esse magni, ut, dignissimos.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate, corporis a qui libero ipsum delectus quidem dolor at nulla, adipisci veniam in reiciendis aut asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in aspernatur pariatur fugit quibusdam dolores sunt esse magni, ut, dignissimos.</p>
+
+		<img src="http://unsplash.it/400/400" class="align-left slide-in">
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, deserunt facilis et iste corrupti omnis tenetur est. Iste ut est dicta dolor itaque adipisci, dolorum minima, veritatis earum provident error molestias. Ratione magni illo sint vel velit ut excepturi consectetur suscipit, earum modi accusamus voluptatem nostrum, praesentium numquam, reiciendis voluptas sit id quisquam. Consequatur in quis reprehenderit modi perspiciatis necessitatibus saepe, quidem, suscipit iure natus dignissimos ipsam, eligendi deleniti accusantium, rerum quibusdam fugit perferendis et optio recusandae sed ratione. Culpa, dolorum reprehenderit harum ab voluptas fuga, nisi eligendi natus maiores illum quas quos et aperiam aut doloremque optio maxime fugiat doloribus. Eum dolorum expedita quam, nesciunt</p>
+
+		<img src="http://unsplash.it/400/400" class="align-right slide-in">
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nulla placeat asperiores reprehenderit sed harum in, omnis facilis labore nostrum, beatae possimus sequi voluptatem eveniet consequuntur. Nobis doloremque perspiciatis itaque.Dicta illum alias laboriosam quod, quibusdam provident fugit quaerat iure animi, rem assumenda officia voluptas a consectetur cum nemo autem porro corporis dolore aliquid, ab adipisci nostrum? Ab, vero quisquam!</p>
+
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, possimus sit distinctio ducimus neque corporis nisi est necessitatibus voluptas suscipit a nemo, excepturi atque soluta molestiae veritatis. Sit, quas iusto.
+		Nesciunt fugiat iusto in nihil ducimus odit? Reprehenderit ad iusto perspiciatis dolorum, consequuntur quia? Dolor ut voluptates nihil facere magnam id vel aliquid magni architecto, ipsam repellendus rem nisi quod?
+		Placeat porro ipsam vero neque quo optio voluptatem magnam laudantium beatae harum inventore, facere nobis odit ab qui adipisci perferendis laboriosam consequatur nam esse fugit natus maiores reprehenderit. Officia, officiis!
+		A fuga non ut dolore culpa ullam quam perferendis amet. Corporis ipsam tempora soluta, velit tempore assumenda, illum ipsa dolorem delectus beatae odit repudiandae vero possimus quam eos voluptatum? Quis.</p>
+
+		<img src="http://unsplash.it/400/400" class="align-right slide-in">
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis officia aliquid temporibus, consequuntur sed laboriosam aperiam, est repudiandae minus iste necessitatibus deleniti fuga doloremque consectetur inventore dicta labore saepe nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate quam, ea repudiandae, amet fuga saepe perferendis beatae, dicta laborum consequuntur aperiam corporis non labore magni dolor ipsam rem. Optio, molestiae.</p>
+
+	</div>
+
+<script>
+
+	const nav = document.querySelector('#main');
+	const  topOfNav = nav.offsetTop;
+
+	function fixNav() {
+		if (window.scrollY >= topOfNav) {
+			document.body.classList.add('fixed-nav');
+			document.body.style.paddingTop = nav.offsetHeight + 'px';
+		}
+		else {
+			document.body.classList.remove('fixed-nav');
+			document.body.style.paddingTop = 0;
+
+		}
+	}
+
+	window.addEventListener('scroll', fixNav)
+</script>
+
+</body>
+</html>
